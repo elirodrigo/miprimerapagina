@@ -4,83 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FHALCON</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/jpg" href="img/logo.JPG">
     <meta name ="theme-color" content="#09f">
     <meta name="description" content="pagina del conglomerado FHALCON">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script  src="https://kit.fontawesome.com/b2a070133d.js" crossorigin="anonymous">
     </script>
 </head>
 
 <body>
      <header>
-          <h1> CONGLOMERADO FHALCON</h1>
+          <h1 class="titulo"> 
+              <img src="img/logo.JPG" alt="logo de la empresa" 
+              height="30"
+              width="60"
+              class="logo1">
+             <div>C. FHALCON</div>
+          </h1>
           <nav>
-     <a href="#inicio">Inicio</a>
-     <a href="#nosotros">Nosotros</a>
-     <a href="#servicios">Servicios</a>  
-     <a href="#contactenos">Contactenos</a>
+                <input type="checkbox" id="check" />
+                     <label for="check" class="checkbtn">
+                      <i class="fa-solid fa-bars"></i>
+                      </label>
+            <ul>
+             <li><a href="#inicio">Inicio</a></li>
+             <li><a href="#nosotros">Nosotros</a></li>
+             <li><a href="#servicios">Servicios</a></li> 
+             <li><a href="#contactenos">Contactenos</a></li>
+            </ul>
           </nav>
      </header>
      <main>
+        <div class="presentacionp">
+    
          <h2> QUE ES FHALCON </h2>
-          <img 
-           id="imagen-fhalcon"
-           title="conglomerado fhalcon"  
-           src="img/conglomerado.png" 
-           height="200" 
-           width="400"
-           alt="una foto de la empresa"
-           > 
-  
-         <P class="descripcion-empresa1">  Fhalcon es un conglomerado internacional, 
+         <div  class="videocontenedor" >
+            <video mute controls width="600" height="300" clas="video" src="img/Video.mp4" >
+         </div>
+
+         <P class="descripcion1">  Fhalcon es un conglomerado internacional, 
          experto en brindar soluciones en mineria, 
          logistica, telecomunicaciones, economia circular,
          data e inteligencia artificial, agro y energias 
-         renovables y no renovables.
-         </P>
-          <p>
-         Somos una empresa con operaciones en mas de 100 paises
+         renovables y no renovables. Somos una empresa con operaciones en mas de 100 paises
          del mundo, actualmente cotizamos en la bolsa de valores 
          de Nueva York. 
          </p>
+        </div>
 
-          <h2>SERVICIOS</h2>
-         <ul>
-         <li>Logistica</li>
-         <li>Mineria</li>
-         <li>Telecomunicaciones</li>
-         <li>Data Solutions y IA</li>
-         <li>Agro</li>
-         <li>Energia</li>
-         <li>Economia Circular</li>
-         </ul>
+        <div class="servicios">
+             <h2>SERVICIOS</h2>
+                 <div class="cajap">
+                     <div class="caja"> Logistica</div>
+                     <div class="caja">Mineria</div>
+                     <div class="caja">Telecomunicaciones</div>
+                     <div class="caja">Data Solutions y IA</div>
+                     <div class="caja">Agro</div>
+                     <div class="caja">Energia</div>
+                     <div class="caja">Economia Circular</div>
+                 </div>    
+        </div>
+
+
          <section>
-          <h2>FORMULARIO DE CONTACTO</h2>
-           <form method="post" action="/fhalcon/">
+       
+          
+        <div class="contenedorformulario">
+            <h2>FORMULARIO DE CONTACTO</h2>
+           <form method="post" action="/fhalcon/" class="formulario">
              <fieldset>
                  <legend>Solicita mas informacion</legend>
                  <div>
-                 <label>Nombres:
-                     <input type="text" placeholder="Eli Rodrigo" name="name" required>
+                 <label>
+                     <input type="text" placeholder="Nombres" name="name" required>
                  </label>
                  </div>
                  <br>
                  <div>
-                 <label>Apellidos:
-                     <input type="text" placeholder="Huaman Rivera" name="apellido" required>
+                 <label>
+                     <input type="text" placeholder="Apellidos" name="apellido" required>
                  </label>
                  </div>
                  <br>
                  <div>
-                 <label>Correo:
-                     <input type="email" placeholder="ejemplo@gmail.com" name="email" required>
+                 <label>
+                     <input type="email" placeholder="Correo" name="email" required>
                  </label>
                  </div>
                  <br>
                  <div>
-                 <label>Telefono:
-                     <input type="tel" placeholder="+51" name="telefono" required>
+                 <label>
+                     <input type="tel" placeholder="Telefono" name="telefono" required>
                  </label>
                  </div>
                  <br>
@@ -93,22 +110,27 @@
                      </datalist>
                      <label>
                         Paíz:
-                        <input list="paises" name="paises">
+                        <input class="imputpais" list="paises" name="paises">
                      </label>
                  </div>
              </fieldset>
+           
              <label>
                  <input type="checkbox" name="checkbox" id="checkbox" required>
                  <small>Acepto recibir más comunicaciones. Podremos enviarle información sobre las novedades de los nuevos programas y productos. Al hacer clic, autoriza a MIT Professional Education a ponerse en contacto con usted por correo electrónico, teléfono, WhatsApp y SMS. Podrá darse de baja o actualizar sus preferencias para recibir notificaciones por correo electrónico en cualquier momento a través del enlace que encontrará al final de cada correo. Los cursos financiados por terceras partes, empresas incluidas, se rigen por términos y condiciones de servicio adicionales. Puede consultar aquí nuestros términos y condiciones y nuestra política de privacidad.</small>
              </label>
-              <input type="submit" value="Enviar">
-              <button>Enviar</button>
+             <!-- <input type="submit" value="Enviar">-->
+              <br>
+              <button class="enviar">Enviar</button>
            </form>
+          
+        </div>
          </section>
      </main>
-     <footer class="contenedor">
 
-      <ul>
+     <footer >
+
+      <ul class="contenedor">
          <li>
             <h3>Acerca de</h3>
                  <details open>
@@ -125,45 +147,50 @@
                  </details>
          </li>
          
-         <li>
-             <h3 id="contactenos">contactenos</h3>
-                 <div class="oficina-principal">
+         <li class="contactenos">
+             <h3 class="titulocontactenos">contactenos</h3>
+             <div class="oficinas">
+                 <div class="oficinaprincipal">
                       <h4>Oficina Principal</h4>
-                         <p>Av. Javier Prado Este 3080, San Borja, Lima - Perú
+                         <div><p>Av. Javier Prado Este 3080, San Borja, Lima - Perú
                              <a href="https://maps.app.goo.gl/NgmRHdJraS5pXqau8" target="_blank" rel="noreferrer">
                              <i class="fa-solid fa-map-location-dot"></i> 
-                             </a> 
+                             </a> </div>
                             <a href="tel:+51929527200">telefono:+51929527200</a>
                          </p>
                  </div>
 
-                 <div class="oficina-operativa">
+                 <div class="oficinaoperativa">
                        <h4>Oficina Operativa</h4>
-                         <p>Av. Bocanegra 274, Callao, Lima - Perú   
+                       <div><p>Av. Bocanegra 274, Callao, Lima - Perú   
                          <a href="https://maps.app.goo.gl/RWJerHFQM1AHNPF16" target="_blank" rel="noreferrer">
                          <i class="fa-solid fa-map-location-dot"></i> 
-                         </a>
+                         </a></div>
+                         <a href="tel:+51929527200">telefono:+51929527200</a>
                          </p>
                  </div>
-                 <div class="oficina-andahuaylas">
+                 <div class="oficinaandahuaylas">
                       <h4>Oficina-andahuaylas</h4>
-                         <p>Av. Los Alamos 339, Andahuaylas, Apurimac - Perú   
+                      <div><p>Av. Los Alamos 339, Andahuaylas, Apurimac - Perú   
                          <a href="https://maps.app.goo.gl/gXBEb1QgJVrEphzMA" target="_blank" rel="noreferrer">
                          <i class="fa-solid fa-map-location-dot"></i>
-                         </a>
+                         </a></div>
+                         <a href="tel:+51929527200">telefono:+51929527200</a>
                          </p>
                  </div>
+                </div>
          </li>
 
-         <li>
-            <h3>Redes sociales</h3>
+         <li class="redessociales">
+            <h3 class="tituloredes">Redes sociales</h3>
+            <div class="redes">
                 <h4  class="facebook">
                      Facebook <a href="https://www.facebook.com/elirodrigo.huamanrivera" target="_blank" rel="noreferrer">
                           <i class="fa-brands fa-facebook"></i>
                         </a> 
                 </h4>
                 <h4  class="whatsapp">
-                    Whatsapp <a href="https://wa.me/+51929527200?text=Hola,%20estoy%20interesado%20en%20tu%20producto" target="_blank" rel="noreferrer">
+                    Whatsapp <a href="https://wa.me/+51929527200?text=Hola,%20estoy%20interesado%20en%20tu%20producto gey" target="_blank" rel="noreferrer">
                          <i class="fa-brands fa-whatsapp"></i>
                        </a> 
                </h4>
@@ -177,11 +204,13 @@
                           <i class="fa-brands fa-linkedin"></i>
                       </a> 
                </h4>
+             </div>
          </li>
       </ul>
 
-     <p>Copyright © CONGLOMERADOR FHALCON SA - Todos los derechos reservados</p>
+     <p class="copyright">Copyright © CONGLOMERADOR FHALCON SA - Todos los derechos reservados</p>
      </footer>   
+     <script src="script.js"></script>
 </body>
 
 
