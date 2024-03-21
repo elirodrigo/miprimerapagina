@@ -1,4 +1,3 @@
-
 body{
    
     margin: 0px;
@@ -38,19 +37,8 @@ main {
         background-color: rgb(193, 196, 199);
 }
 
-     main h2 {
-        display: flex;
-       align-items: center;
-       justify-content: center;
-      }
-     .principal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-      }
-
     .presentacionp {
-        background-image: url('img/fondoprincipal2.jpg'); /* Ruta de la imagen de fondo */
+        background-image: url('img/fondoprincipal4.JPG'); /* Ruta de la imagen de fondo */
         background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
         background-position: center; /* Centra la imagen en el contenedor */
         width: 100%; /* Ancho del contenedor */
@@ -58,16 +46,32 @@ main {
         color: white; /* Color de texto */
         text-align: center; /* Alineación de texto al centro */
         padding-top: 10px; /* Espaciado superior para centrar verticalmente el texto */
-    }
-   
-    
-
-    .video {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-          }
-   
+       justify-content: center;
+    }
+       
+   /* .videocontenedor {
+        width: 50%;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .videocontenedor ::after {
+        content: "";
+        display: block;
+        width: 100%;
+    }
+    .videocontenedor video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }*/
      .descripcion1 {
             margin-top: 0px;
             padding: 20px 50px 20px 50px;
@@ -79,16 +83,35 @@ main {
         .servicios {
             background-color: #ccc;
         }
+
+             .servicios{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      }
+
+          .cajap {
+              display: flex;
+              width: 50%;
+              flex-wrap: wrap;
+              gap: 20px;
+          }
+
     .contenedorformulario {
-        background-image: url('img/imgformulario.JPG'); /* Ruta de la imagen de fondo */
+        background-image: url('img/inteligencia.jpg'); /* Ruta de la imagen de fondo */
         background-size: cover; /* Ajusta el tamaño de la imagen al contenedor */
         background-position: center; /* Centra la imagen en el contenedor */
         width: 100%; /* Ancho del contenedor */
-        height: 600px; /* Altura del contenedor */
+        height: 700px; /* Altura del contenedor */
         display: flex;
+        flex-direction: wrap;
         align-items: center;
-        flex-flow: flex-start;
+        justify-content: flex-end;
        
+    }
+    .contenedorformulario h2{
+        color: white;
     }
     .formulario {
         background-color: white;
@@ -101,7 +124,7 @@ main {
         margin: 1px 100px 1px 10px;
         font-size: 15px;
         width: 400px;
-        height: 100%;
+        height: 90%;
     }
     .formulario legend{
         font-size:20px ;
@@ -156,6 +179,143 @@ footer {
     background-color: rgb(36, 33, 33);
     color: white;
 }
+
+      .contactenos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      }
+     .contactenos .oficinas {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+      }
+     .oficinaoperativa, .oficinaandahuaylas, .oficinaprincipal  {
+        display: flex;
+    flex-direction: column;
+  
+     }
+
+
+      .redessociales {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+     .redessociales .redes {
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .copyright {
+        text-align: center;
+        background-color:  rgb(134, 126, 126);
+        padding: 20px;
+        font-size: 13px;
+               }
+
+/* menu res´pnsivo*/
+#check {
+    display: none;
+  }
+.checkbtn {
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    /* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
+    .checkbtn {
+        display: block;
+      }
+      header {
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+      }
+    header nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(59, 59, 99);
+        text-align: center;
+        
+        top: 80px;
+        left: 100%;
+        transition: all 0.5s;
+        }
+        #check:checked  ~ ul {
+            left: 0;
+            display: block;
+        
+        }
+        header nav ul li {
+            display: block;
+            margin: 50px 0;
+            line-height: 30px;
+        }
+        header nav ul li a {
+            font-size: 20px;
+    }
+    #check:checked ~.checkbtn {
+        color: blue;
+    }
+    
+
+
+      .presentacionp {
+        text-align: center;
+         display: flex;
+        align-items: center;
+       justify-content: center;
+        width: 100%; /* Ancho del contenedor */
+    }
+    .videocontenedor {
+        
+        overflow: hidden;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+       justify-content: center;
+    }
+    .video {
+        height: auto;
+        width:10% ;
+    }
+    .descripcion1 {
+        font-size: 10px;
+    }
+  
+    .contenedorformulario {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+    }
+
+    .formulario {
+        height: auto;
+        width: 80%
+    }
+
+
+}
+
+ 
 
 
 
